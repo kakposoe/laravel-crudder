@@ -2,14 +2,18 @@
 
 return [
 
-    'crudder' => [
+    /**
+     * wrapper class for each field
+     */
+    'main_path' => '',
 
-        /**
-         * A array of all models who's routes should be created by the crudder
-         */
-        'models' => [
-            // 'User'
-        ]
+    /**
+     * A array of all models who's routes should be created by the crudder
+     */
+    'models' => [
+        //'User' => [
+        //    'route_path' => '',
+        //]
     ],
 
     /**
