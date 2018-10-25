@@ -15,9 +15,9 @@ class CrudderController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index(Request $request)
+    public function create(Request $request)
     {
-        $content = (new Crudder)->processRequest($request->route_name);
+        $content = (new Crudder)->create($request->route_name);
         return view('crudder::template', compact('content'));
     }
 }
