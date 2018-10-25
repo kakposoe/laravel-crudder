@@ -1,0 +1,11 @@
+{
+    "name": "kakposoe/crudder",
+    "description": "Easy creation of create and update forms and routes",
+    "authors": [
+        {
+            "name": "kakposoe",
+            "email": "kakposoe@gmail.com"
+        }
+    ],
+    "require": {}
+}
