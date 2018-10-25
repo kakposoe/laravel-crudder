@@ -135,7 +135,7 @@ class CrudderController extends Controller
 
         $type = $this->getType($options, $tableName, $field);
 
-        $className = '\Kakposoe\Crudder\Classes\\' . ucfirst($type) . 'Generator';
+        $className = '\Kakposoe\Crudder\Classes\\Generators\\' . ucfirst($type) . 'Generator';
         return (new $className)->create($field, $options);
     }
 

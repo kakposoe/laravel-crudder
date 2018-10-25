@@ -1,14 +1,14 @@
 <?php
 
-namespace Kakposoe\Crudder\Classes;
+namespace Kakposoe\Crudder\Classes\Generators;
 
-class EmailGenerator
+class StringGenerator implements Generator
 {
     public function create(string $fieldName, array $options)
     {
         extract($options);
 
-        $field = '<input type="email" name="' . $fieldName . '" value="" ';
+        $field = '<input type="text" name="' . $fieldName . '" value="" ';
 
         if (!empty($options['placeholder'])) {
             $field .= 'placeholder="' . $options['placeholder'] . '"';
