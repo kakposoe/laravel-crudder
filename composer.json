@@ -7,5 +7,20 @@
             "email": "kakposoe@gmail.com"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Kakposoe\\Crudder": "src/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kakposoe\\Crudder\\CrudderServiceProvider"
+            ],
+            "aliases": {
+                "Crudder": "Kakposoe\\Crudder\\CrudderFacade"
+            }
+        }
+    }
 }
