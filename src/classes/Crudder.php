@@ -31,7 +31,7 @@ class Crudder
      *
      * @return string
      */
-    public function processRequest(string $routeName)
+    public function create(string $routeName)
     {
         if (!$this->isRegisteredModel($routeName)) {
             return '404';
