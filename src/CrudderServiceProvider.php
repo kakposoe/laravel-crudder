@@ -13,7 +13,12 @@ class CrudderServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+        $this->publishes([
+            __DIR__ . '/../config/crudder.php' => config_path('crudder.php')
+        ]);
+
+        $this->loadViewsFrom(__DIR__ . '/views', 'crudder');
+        $this->loadRoutesFrom(__DIR__ . '/routes.php');
     }
 
     /**
@@ -23,6 +28,6 @@ class CrudderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('Kakposoe\Crudder\CrudderController');
+        $this->app->make('Kakposoe\Crudder\Controllers\CrudderController');
     }
 }
